@@ -32,7 +32,7 @@ public class TaskExecutor {
 	}
 
 	public void cancelAll() {
-		ArrayList<TaskData> tasks = taskManager.getDatas();
+		Iterable<TaskData> tasks = taskManager.getDatas();
 		for (TaskData data : tasks)
 			cancel(data);
 	}
@@ -83,7 +83,7 @@ public class TaskExecutor {
 			return map.get(task);
 		}
 
-		public ArrayList<TaskData> getDatas() {
+		public Iterable<TaskData> getDatas() {
 			return tasks;
 		}
 
